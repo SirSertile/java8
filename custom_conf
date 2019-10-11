@@ -1,0 +1,27 @@
+[ req ]
+default_bits      = 2048
+distinguished_name = req_distinguished_name
+req_extensions     = req_ext
+ 
+ 
+[ req_distinguished_name ]
+countryName                  = Country Name (2 letter code)
+countryName_default          = US
+stateOrProvinceName          = State Name (2 letter code)
+stateOrProvinceName_default  = VT
+localityName                 = Locality Name (eg, city)
+localityName_default         = Burlington
+organizationName             = Organization Name (eg, company)
+organizationName_default     = LCDI
+organizationalUnitName       = Organizational Unit Name (eg, division or team)
+organizationalUnitName_default = SOC
+commonName                   = Common Name (e.g. server FQDN or IP if no FQDN)
+commonName_max               = 64
+commonName_default           = localhost
+ 
+[ req_ext ]
+subjectAltName = @alt_names
+ 
+[alt_names]
+DNS.1   = servername.tld
+DNS.2   = another-servername.tld
